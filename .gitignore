@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+#build.gradle
+build/
+gradle/
+gradlew
+gradlew.bat
+java-client-7.3.0/
+selenium-java-3.141.59/
+settings.gradle
+#src/

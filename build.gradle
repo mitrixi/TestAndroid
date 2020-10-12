@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+}
+
+android {
+    // Each product flavor you configure can override properties in the
+    // defaultConfig {} block. To learn more, go to Configure product flavors.
+    defaultConfig {
+        // Specifies the application ID for the test APK.
+        testApplicationId "com.test.foo"
+        // Specifies the fully-qualified class name of the test instrumentation runner.
+        testInstrumentationRunner "android.test.InstrumentationTestRunner"
+        // If set to 'true', enables the instrumentation class to start and stop profiling.
+        // If set to false (default), profiling occurs the entire time the instrumentation
+        // class is running.
+        testHandleProfiling true
+        // If set to 'true', indicates that the Android system should run the instrumentation
+        // class as a functional test. The default value is 'false'
+        testFunctionalTest true
+    }
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'com.codeborne', name: 'selenide', version: '5.13.1'
+//    compile group: 'io.qameta.allure', name: 'allure-gradle', version: '2.3'
+    compile group: 'io.qameta.allure', name: 'allure-testng', version: '2.13.5'
+    testCompile group: 'org.testng', name: 'testng', version: '7.3.0'
+    compile group: 'org.aspectj', name: 'aspectjweaver', version: '1.9.6'
+    compile group: 'org.slf4j', name: 'slf4j-simple', version: '1.6.1'
+    compile group: 'com.google.guava', name: 'guava', version: '29.0-jre'
+    compile group: 'io.appium', name: 'java-client', version: '7.3.0'
+    compile group: 'com.comcast.magic-wand', name: 'appium', version: '4.0.3'
+
+
+
+}
